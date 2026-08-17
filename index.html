@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Diamond Gym – Experience state-of-the-art functional training. Claim your free trial today and redefine your limits with elite coaching, premium equipment, and a driven community." />
+  <meta name="keywords" content="Diamond Gym, gym membership, fitness classes, personal training, barbell club, core fusion, gravity cycle" />
+  <meta property="og:title" content="Diamond Gym | Defy Gravity. Redefine Limits." />
+  <meta property="og:description" content="State-of-the-art training facility. Claim your free trial today." />
+  <meta property="og:type" content="website" />
+  <title>Diamond Gym | Defy Gravity. Redefine Limits.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="diamond-icon preloader-diamond">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="30,2 58,22 46,56 14,56 2,22" stroke="#FF1E1E" stroke-width="2.5" fill="none"/>
+          <polygon points="30,12 50,26 42,50 18,50 10,26" fill="#FF1E1E" opacity="0.2"/>
+        </svg>
+      </div>
+      <span class="preloader-text">DIAMOND GYM</span>
+    </div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Diamond Gym Home">
+        <div class="diamond-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="30,2 58,22 46,56 14,56 2,22" stroke="#FF1E1E" stroke-width="2.5" fill="none"/>
+            <polygon points="30,12 50,26 42,50 18,50 10,26" fill="#FF1E1E" opacity="0.5"/>
+          </svg>
+        </div>
+        <span>DIAMOND <span class="logo-accent">GYM</span></span>
+      </a>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#philosophy" class="nav-link">Training</a></li>
+        <li><a href="#classes" class="nav-link">Classes</a></li>
+        <li><a href="#membership" class="nav-link">Membership</a></li>
+        <li><a href="#locations" class="nav-link">Locations</a></li>
+      </ul>
+
+      <a href="#trial" class="btn btn-glow nav-cta" id="navCtaBtn">GET STARTED</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <!-- Animated background particles -->
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <div class="hero-container">
+      <div class="hero-content" data-animate="fade-up">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          EST. 2018 &nbsp;·&nbsp; ELITE TRAINING
+        </div>
+        <h1 class="hero-headline">
+          DEFY<br/>
+          <span class="headline-accent">GRAVITY.</span><br/>
+          REDEFINE<br/>
+          LIMITS.
+        </h1>
+        <p class="hero-sub">
+          Experience dynamic, state-of-the-art functional training at Diamond Gym.
+          Elevate your strength and performance today.
+        </p>
+        <div class="hero-actions">
+          <a href="#trial" class="btn btn-primary btn-glow" id="heroCtaBtn">
+            CLAIM YOUR FREE TRIAL
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#classes" class="btn btn-ghost" id="heroClassesBtn">
+            EXPLORE CLASSES
+          </a>
+        </div>
+        <div class="hero-stats" role="list" aria-label="Gym statistics">
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="2400">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="48">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Classes/Week</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat" role="listitem">
+            <span class="stat-num" data-count="15">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Elite Coaches</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-animate="fade-left">
+        <div class="hero-img-wrapper">
+          <div class="hero-img-glow" aria-hidden="true"></div>
+          <img
+            src="gym_hero_athlete.png"
+            alt="Elite athlete performing intense overhead press in Diamond Gym"
+            class="hero-img"
+            loading="eager"
+          />
+          <div class="hero-img-overlay" aria-hidden="true"></div>
+          <div class="floating-badge floating-badge-1" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF1E1E"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span>Elite Training</span>
+          </div>
+          <div class="floating-badge floating-badge-2" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF1E1E"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.72L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.72C7.01 18.38 6 15.28 6 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
+            <span>500+ Machines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE TICKER ========== -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track">
+      <span>STRENGTH &amp; POWER</span><span class="ticker-sep">◆</span>
+      <span>ENDURANCE TRAINING</span><span class="ticker-sep">◆</span>
+      <span>MOBILITY &amp; RECOVERY</span><span class="ticker-sep">◆</span>
+      <span>ELITE COACHING</span><span class="ticker-sep">◆</span>
+      <span>GRAVITY CYCLE</span><span class="ticker-sep">◆</span>
+      <span>BARBELL CLUB</span><span class="ticker-sep">◆</span>
+      <span>CORE FUSION</span><span class="ticker-sep">◆</span>
+      <span>PREMIUM EQUIPMENT</span><span class="ticker-sep">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span>STRENGTH &amp; POWER</span><span class="ticker-sep">◆</span>
+      <span>ENDURANCE TRAINING</span><span class="ticker-sep">◆</span>
+      <span>MOBILITY &amp; RECOVERY</span><span class="ticker-sep">◆</span>
+      <span>ELITE COACHING</span><span class="ticker-sep">◆</span>
+      <span>GRAVITY CYCLE</span><span class="ticker-sep">◆</span>
+      <span>BARBELL CLUB</span><span class="ticker-sep">◆</span>
+      <span>CORE FUSION</span><span class="ticker-sep">◆</span>
+      <span>PREMIUM EQUIPMENT</span><span class="ticker-sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ========== TRAINING PHILOSOPHY ========== -->
+  <section id="philosophy" class="philosophy section" aria-labelledby="philosophyTitle">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow">OUR APPROACH</span>
+        <h2 id="philosophyTitle">TRAINING PHILOSOPHY</h2>
+        <p class="section-sub">We don't believe in one-size-fits-all. Our methodology is built around three pillars that unlock your full athletic potential.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <article class="philosophy-card" data-animate="fade-up" data-delay="0" tabindex="0" aria-labelledby="cardTitle1">
+          <div class="card-number" aria-hidden="true">01</div>
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="#FF1E1E" stroke-width="1.5" opacity="0.3"/>
+              <path d="M8 24h6M34 24h6M14 24c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10-10-4.48-10-10z" stroke="#FF1E1E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M19 24h10M24 19v10" stroke="#FF1E1E" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 id="cardTitle1" class="card-title">STRENGTH &amp; POWER</h3>
+          <p class="card-desc">Progressive overload programs engineered by certified strength coaches. Build raw power, explosive force, and unbreakable muscle through proven periodization methods.</p>
+          <ul class="card-features" aria-label="Strength training features">
+            <li>Olympic lifting platforms</li>
+            <li>Powerlifting racks &amp; specialty bars</li>
+            <li>Customized strength programs</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#trial" class="card-link" id="strengthLink">Learn More <span>→</span></a>
+          </div>
+          <div class="card-accent-line" aria-hidden="true"></div>
+        </article>
+
+        <article class="philosophy-card card-featured" data-animate="fade-up" data-delay="150" tabindex="0" aria-labelledby="cardTitle2">
+          <div class="card-featured-badge" aria-label="Most popular">MOST POPULAR</div>
+          <div class="card-number" aria-hidden="true">02</div>
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="#FF1E1E" stroke-width="1.5" opacity="0.3"/>
+              <path d="M16 36l4-8 4 4 4-12 4 8" stroke="#FF1E1E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="14" r="3" fill="#FF1E1E"/>
+            </svg>
+          </div>
+          <h3 id="cardTitle2" class="card-title">ENDURANCE &amp; AGILITY</h3>
+          <p class="card-desc">High-intensity interval training, metabolic conditioning, and sport-specific agility drills designed to push your cardiovascular limits and sharpen reaction time.</p>
+          <ul class="card-features" aria-label="Endurance training features">
+            <li>HIIT &amp; MetCon classes</li>
+            <li>Agility ladders &amp; sprint tracks</li>
+            <li>VO₂ max assessment tools</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#trial" class="card-link" id="enduranceLink">Learn More <span>→</span></a>
+          </div>
+          <div class="card-accent-line" aria-hidden="true"></div>
+        </article>
+
+        <article class="philosophy-card" data-animate="fade-up" data-delay="300" tabindex="0" aria-labelledby="cardTitle3">
+          <div class="card-number" aria-hidden="true">03</div>
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="#FF1E1E" stroke-width="1.5" opacity="0.3"/>
+              <path d="M24 10c0 0-8 6-8 14 0 4.42 3.58 8 8 8s8-3.58 8-8c0-8-8-14-8-14z" stroke="#FF1E1E" stroke-width="2" fill="none"/>
+              <path d="M20 28c0 0 1 4 4 4s4-4 4-4" stroke="#FF1E1E" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 id="cardTitle3" class="card-title">MOBILITY &amp; RECOVERY</h3>
+          <p class="card-desc">Dedicated recovery zones with expert-led flexibility and mobility sessions. Because elite performance requires elite recovery — prevent injury, move better, feel unstoppable.</p>
+          <ul class="card-features" aria-label="Mobility training features">
+            <li>Stretch &amp; mobility studio</li>
+            <li>Cold plunge &amp; sauna access</li>
+            <li>Sports massage therapy</li>
+          </ul>
+          <div class="card-cta">
+            <a href="#trial" class="card-link" id="mobilityLink">Learn More <span>→</span></a>
+          </div>
+          <div class="card-accent-line" aria-hidden="true"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLASSES ========== -->
+  <section id="classes" class="classes section" aria-labelledby="classesTitle">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow">WHAT WE OFFER</span>
+        <h2 id="classesTitle">FEATURED CLASSES</h2>
+        <p class="section-sub">From explosive cycle sessions to heavy iron — find the class that ignites your fire.</p>
+      </div>
+
+      <div class="classes-grid">
+        <article class="class-card" data-animate="fade-up" data-delay="0" tabindex="0" aria-labelledby="classTitle1">
+          <div class="class-img-wrap">
+            <img src="class_gravity_cycle.png" alt="Gravity Cycle high-intensity indoor cycling class" class="class-img" loading="lazy" />
+            <div class="class-img-overlay" aria-hidden="true"></div>
+            <div class="class-tag" aria-label="Intensity: High">HIGH INTENSITY</div>
+          </div>
+          <div class="class-body">
+            <div class="class-meta">
+              <span class="class-duration">45 MIN</span>
+              <span class="class-level">ALL LEVELS</span>
+            </div>
+            <h3 id="classTitle1" class="class-name">GRAVITY CYCLE</h3>
+            <p class="class-desc">Ride to the rhythm in our signature cycle studio. Explosive intervals, hill climbs, and full-body conditioning on the bike — no mercy, maximum results.</p>
+            <a href="#trial" class="class-link" id="classLink1">
+              VIEW SCHEDULE
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="class-card class-card-featured" data-animate="fade-up" data-delay="150" tabindex="0" aria-labelledby="classTitle2">
+          <div class="class-img-wrap">
+            <img src="class_core_fusion.png" alt="Core Fusion intense abdominal and core workout class" class="class-img" loading="lazy" />
+            <div class="class-img-overlay" aria-hidden="true"></div>
+            <div class="class-tag" aria-label="Intensity: Medium">CORE FOCUS</div>
+          </div>
+          <div class="class-body">
+            <div class="class-meta">
+              <span class="class-duration">60 MIN</span>
+              <span class="class-level">INTERMEDIATE</span>
+            </div>
+            <h3 id="classTitle2" class="class-name">CORE FUSION</h3>
+            <p class="class-desc">Forge an ironclad core through a fusion of pilates, functional movement, and strength training. Build the foundation every elite athlete needs.</p>
+            <a href="#trial" class="class-link" id="classLink2">
+              VIEW SCHEDULE
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="class-card" data-animate="fade-up" data-delay="300" tabindex="0" aria-labelledby="classTitle3">
+          <div class="class-img-wrap">
+            <img src="class_barbell_club.png" alt="Barbell Club powerlifting and strength class" class="class-img" loading="lazy" />
+            <div class="class-img-overlay" aria-hidden="true"></div>
+            <div class="class-tag" aria-label="Intensity: High">POWERLIFTING</div>
+          </div>
+          <div class="class-body">
+            <div class="class-meta">
+              <span class="class-duration">75 MIN</span>
+              <span class="class-level">ADVANCED</span>
+            </div>
+            <h3 id="classTitle3" class="class-name">BARBELL CLUB</h3>
+            <p class="class-desc">The house of iron. Coach-led sessions focused on squat, bench, and deadlift technique. Join a tribe of serious lifters committed to hitting new personal records.</p>
+            <a href="#trial" class="class-link" id="classLink3">
+              VIEW SCHEDULE
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials" data-animate="fade-up">
+        <div class="testimonials-header">
+          <h2 class="testimonials-title">WHAT OUR MEMBERS SAY</h2>
+          <div class="testimonials-stars" aria-label="5 out of 5 stars">
+            ★★★★★
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card testimonial-featured" id="testimonial1">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <p class="testimonial-text">Diamond Gym completely transformed my physique and my mindset. Coach Marcus built me a custom program that pushed me harder than I ever thought possible. In 6 months I lost 40 lbs and added 80 lbs to my deadlift. This isn't just a gym — it's a brotherhood. The community here holds you accountable like nothing else.</p>
+            <footer class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">JM</div>
+              <div class="testimonial-author">
+                <cite class="testimonial-name">James Mitchell</cite>
+                <span class="testimonial-role">Member since 2022 · Barbell Club</span>
+              </div>
+              <div class="testimonial-rating" aria-label="5 stars">★★★★★</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" id="testimonial2">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <p class="testimonial-text">The trainers here are genuinely world-class. My mobility and recovery sessions with Sarah changed how I move entirely. No more back pain, no more tight hips. I perform better at 38 than I did at 28.</p>
+            <footer class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">KR</div>
+              <div class="testimonial-author">
+                <cite class="testimonial-name">Karen Rodriguez</cite>
+                <span class="testimonial-role">Member since 2023 · Mobility Sessions</span>
+              </div>
+              <div class="testimonial-rating" aria-label="5 stars">★★★★★</div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" id="testimonial3">
+            <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+            <p class="testimonial-text">Gravity Cycle is literally addictive. The energy in that room, the music, the coaches — I've tried every boutique studio in the city and nothing comes close. Joined for the classes, stayed for the community.</p>
+            <footer class="testimonial-footer">
+              <div class="testimonial-avatar" aria-hidden="true">AL</div>
+              <div class="testimonial-author">
+                <cite class="testimonial-name">Aisha Lawson</cite>
+                <span class="testimonial-role">Member since 2021 · Gravity Cycle</span>
+              </div>
+              <div class="testimonial-rating" aria-label="5 stars">★★★★★</div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MEMBERSHIP ========== -->
+  <section id="membership" class="membership section" aria-labelledby="membershipTitle">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow">JOIN THE ELITE</span>
+        <h2 id="membershipTitle">MEMBERSHIP PLANS</h2>
+        <p class="section-sub">No gimmicks. No lock-ins. Choose the plan that fits your ambition.</p>
+      </div>
+
+      <div class="membership-grid">
+        <article class="membership-card" data-animate="fade-up" data-delay="0" aria-labelledby="planTitle1">
+          <div class="plan-header">
+            <h3 id="planTitle1" class="plan-name">IRON</h3>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">49</span>
+              <span class="plan-period">/mo</span>
+            </div>
+            <p class="plan-tagline">Start your journey</p>
+          </div>
+          <ul class="plan-features" aria-label="Iron plan features">
+            <li class="feature-item included">Gym floor access (6am–10pm)</li>
+            <li class="feature-item included">Locker room &amp; showers</li>
+            <li class="feature-item included">2 group classes/month</li>
+            <li class="feature-item included">App &amp; progress tracking</li>
+            <li class="feature-item excluded">Personal training sessions</li>
+            <li class="feature-item excluded">Recovery zone access</li>
+            <li class="feature-item excluded">Nutrition consulting</li>
+          </ul>
+          <a href="#trial" class="btn btn-ghost btn-full" id="planBtn1">START FREE TRIAL</a>
+        </article>
+
+        <article class="membership-card membership-card-featured" data-animate="fade-up" data-delay="150" aria-labelledby="planTitle2">
+          <div class="plan-best-value" aria-label="Best value plan">BEST VALUE</div>
+          <div class="plan-header">
+            <h3 id="planTitle2" class="plan-name">DIAMOND</h3>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">99</span>
+              <span class="plan-period">/mo</span>
+            </div>
+            <p class="plan-tagline">Train like a champion</p>
+          </div>
+          <ul class="plan-features" aria-label="Diamond plan features">
+            <li class="feature-item included">24/7 Gym floor access</li>
+            <li class="feature-item included">Locker room &amp; showers</li>
+            <li class="feature-item included">Unlimited group classes</li>
+            <li class="feature-item included">App &amp; progress tracking</li>
+            <li class="feature-item included">2 PT sessions/month</li>
+            <li class="feature-item included">Recovery zone access</li>
+            <li class="feature-item excluded">Nutrition consulting</li>
+          </ul>
+          <a href="#trial" class="btn btn-primary btn-glow btn-full" id="planBtn2">START FREE TRIAL</a>
+        </article>
+
+        <article class="membership-card" data-animate="fade-up" data-delay="300" aria-labelledby="planTitle3">
+          <div class="plan-header">
+            <h3 id="planTitle3" class="plan-name">ELITE</h3>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">179</span>
+              <span class="plan-period">/mo</span>
+            </div>
+            <p class="plan-tagline">The full experience</p>
+          </div>
+          <ul class="plan-features" aria-label="Elite plan features">
+            <li class="feature-item included">24/7 Gym floor access</li>
+            <li class="feature-item included">Locker room &amp; showers</li>
+            <li class="feature-item included">Unlimited group classes</li>
+            <li class="feature-item included">App &amp; progress tracking</li>
+            <li class="feature-item included">8 PT sessions/month</li>
+            <li class="feature-item included">Recovery zone access</li>
+            <li class="feature-item included">Monthly nutrition consult</li>
+          </ul>
+          <a href="#trial" class="btn btn-ghost btn-full" id="planBtn3">START FREE TRIAL</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LOCATIONS ========== -->
+  <section id="locations" class="locations section" aria-labelledby="locationsTitle">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-eyebrow">FIND US</span>
+        <h2 id="locationsTitle">OUR LOCATIONS</h2>
+        <p class="section-sub">Three world-class facilities engineered for performance.</p>
+      </div>
+      <div class="locations-grid">
+        <article class="location-card" data-animate="fade-up" data-delay="0" tabindex="0">
+          <div class="location-map-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-pin">
+              <path d="M30 5C20.06 5 12 13.06 12 23c0 14.25 18 32 18 32s18-17.75 18-32C48 13.06 39.94 5 30 5zm0 24a7 7 0 110-14 7 7 0 010 14z" fill="#FF1E1E" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="location-body">
+            <h3 class="location-name">DOWNTOWN FLAGSHIP</h3>
+            <address class="location-address">42 Iron Street, City Center</address>
+            <p class="location-hours"><strong>Hours:</strong> Open 24 / 7</p>
+            <p class="location-size"><strong>Size:</strong> 18,000 sq ft</p>
+            <a href="#trial" class="card-link" id="locationLink1">Get Directions <span>→</span></a>
+          </div>
+        </article>
+        <article class="location-card" data-animate="fade-up" data-delay="150" tabindex="0">
+          <div class="location-map-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-pin">
+              <path d="M30 5C20.06 5 12 13.06 12 23c0 14.25 18 32 18 32s18-17.75 18-32C48 13.06 39.94 5 30 5zm0 24a7 7 0 110-14 7 7 0 010 14z" fill="#FF1E1E" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="location-body">
+            <h3 class="location-name">WESTSIDE PERFORMANCE</h3>
+            <address class="location-address">108 Muscle Ave, West District</address>
+            <p class="location-hours"><strong>Hours:</strong> 5am – 11pm Daily</p>
+            <p class="location-size"><strong>Size:</strong> 12,500 sq ft</p>
+            <a href="#trial" class="card-link" id="locationLink2">Get Directions <span>→</span></a>
+          </div>
+        </article>
+        <article class="location-card" data-animate="fade-up" data-delay="300" tabindex="0">
+          <div class="location-map-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="location-pin">
+              <path d="M30 5C20.06 5 12 13.06 12 23c0 14.25 18 32 18 32s18-17.75 18-32C48 13.06 39.94 5 30 5zm0 24a7 7 0 110-14 7 7 0 010 14z" fill="#FF1E1E" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="location-body">
+            <h3 class="location-name">NORTHGATE STUDIO</h3>
+            <address class="location-address">77 Power Blvd, North End</address>
+            <p class="location-hours"><strong>Hours:</strong> 6am – 10pm Daily</p>
+            <p class="location-size"><strong>Size:</strong> 9,000 sq ft</p>
+            <a href="#trial" class="card-link" id="locationLink3">Get Directions <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRIAL / LEAD CAPTURE ========== -->
+  <section id="trial" class="trial section" aria-labelledby="trialTitle">
+    <div class="trial-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="trial-inner" data-animate="fade-up">
+        <div class="trial-content">
+          <span class="section-eyebrow">LIMITED OFFER</span>
+          <h2 id="trialTitle" class="trial-headline">READY TO START YOUR TRANSFORMATION?</h2>
+          <p class="trial-sub">Claim your 7-day free trial. No credit card required. Cancel any time.</p>
+          <ul class="trial-perks" aria-label="Trial perks">
+            <li>✓ Full gym access for 7 days</li>
+            <li>✓ Complimentary fitness assessment</li>
+            <li>✓ 1 free personal training session</li>
+            <li>✓ Access to all group classes</li>
+          </ul>
+        </div>
+        <form class="trial-form" id="trialForm" novalidate aria-label="Free trial sign-up form">
+          <h3 class="form-title">CLAIM YOUR FREE TRIAL</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="goal" class="form-label">Primary Fitness Goal</label>
+            <select id="goal" name="goal" class="form-input form-select">
+              <option value="">Select your goal...</option>
+              <option value="strength">Build Strength &amp; Muscle</option>
+              <option value="weight-loss">Weight Loss</option>
+              <option value="endurance">Improve Endurance</option>
+              <option value="mobility">Mobility &amp; Recovery</option>
+              <option value="performance">Athletic Performance</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow btn-full" id="trialSubmitBtn">
+            CLAIM FREE TRIAL NOW
+            <span class="btn-arrow">→</span>
+          </button>
+          <p class="form-disclaimer">By submitting, you agree to our <a href="#" class="form-link">Terms</a> and <a href="#" class="form-link">Privacy Policy</a>. We never spam.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo" aria-label="Diamond Gym Home">
+            <div class="diamond-icon">
+              <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="30,2 58,22 46,56 14,56 2,22" stroke="#FF1E1E" stroke-width="2.5" fill="none"/>
+                <polygon points="30,12 50,26 42,50 18,50 10,26" fill="#FF1E1E" opacity="0.5"/>
+              </svg>
+            </div>
+            <span>DIAMOND <span class="logo-accent">GYM</span></span>
+          </a>
+          <p class="footer-tagline">Where champions are forged. Push beyond your limits every single day.</p>
+          <div class="social-links" role="list" aria-label="Social media links">
+            <!-- Instagram -->
+            <a href="#" class="social-link" id="socialInstagram" role="listitem" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="social-link" id="socialFacebook" role="listitem" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <!-- Twitter / X -->
+            <a href="#" class="social-link" id="socialTwitter" role="listitem" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="social-link" id="socialYoutube" role="listitem" aria-label="Subscribe on YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation - Training">
+          <h4 class="footer-nav-title">TRAINING</h4>
+          <ul role="list">
+            <li><a href="#philosophy" class="footer-link">Strength &amp; Power</a></li>
+            <li><a href="#philosophy" class="footer-link">Endurance &amp; Agility</a></li>
+            <li><a href="#philosophy" class="footer-link">Mobility &amp; Recovery</a></li>
+            <li><a href="#classes" class="footer-link">Personal Training</a></li>
+            <li><a href="#classes" class="footer-link">Group Classes</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Footer navigation - Membership">
+          <h4 class="footer-nav-title">MEMBERSHIP</h4>
+          <ul role="list">
+            <li><a href="#membership" class="footer-link">Iron Plan</a></li>
+            <li><a href="#membership" class="footer-link">Diamond Plan</a></li>
+            <li><a href="#membership" class="footer-link">Elite Plan</a></li>
+            <li><a href="#trial" class="footer-link">Free Trial</a></li>
+            <li><a href="#locations" class="footer-link">Locations</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-nav-title">STAY IN THE ZONE</h4>
+          <p class="footer-newsletter-text">Get training tips, class updates, and exclusive offers delivered to your inbox.</p>
+          <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter sign-up">
+            <div class="newsletter-input-wrap">
+              <input type="email" id="newsletterEmail" name="email" class="newsletter-input" placeholder="your@email.com" required autocomplete="email" aria-label="Email for newsletter" />
+              <button type="submit" class="newsletter-btn" id="newsletterSubmitBtn" aria-label="Subscribe to newsletter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Diamond Gym. All rights reserved. Built for those who refuse to quit.</p>
+        <div class="footer-legal" role="list">
+          <a href="#" class="footer-link footer-legal-link" role="listitem">Privacy Policy</a>
+          <a href="#" class="footer-link footer-legal-link" role="listitem">Terms of Service</a>
+          <a href="#" class="footer-link footer-legal-link" role="listitem">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Toast -->
+  <div class="toast" id="successToast" role="alert" aria-live="polite" aria-atomic="true">
+    <div class="toast-icon" aria-hidden="true">✓</div>
+    <div class="toast-content">
+      <strong>You're in!</strong>
+      <span>We'll be in touch within 24 hours.</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

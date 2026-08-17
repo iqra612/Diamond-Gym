@@ -1,0 +1,20 @@
+.ticker-wrap {
+  background: var(--red);
+  overflow: hidden; padding: 14px 0;
+  position: relative; z-index: 5;
+}
+.ticker-track {
+  display: flex; gap: 48px;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+.ticker-track span {
+  font-family: var(--font-display);
+  font-size: 14px; letter-spacing: 0.25em;
+  color: var(--white); flex-shrink: 0;
+}
+.ticker-sep { color: rgba(255,255,255,0.5) !important; font-size: 10px !important; margin-left: 48px; }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

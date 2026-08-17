@@ -1,0 +1,172 @@
+/* ============================================
+   DIAMOND GYM — GLOBAL CSS
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ---------- TOKENS ---------- */
+:root {
+  --black:     #0B0B0B;
+  --black-2:   #111111;
+  --black-3:   #161616;
+  --black-4:   #1E1E1E;
+  --black-5:   #242424;
+  --red:       #FF1E1E;
+  --red-dark:  #CC0000;
+  --red-dim:   rgba(255,30,30,0.15);
+  --red-glow:  rgba(255,30,30,0.4);
+  --white:     #FFFFFF;
+  --white-60:  rgba(255,255,255,0.6);
+  --white-30:  rgba(255,255,255,0.3);
+  --white-10:  rgba(255,255,255,0.08);
+
+  --font-display: 'Bebas Neue', 'Arial Black', sans-serif;
+  --font-body:    'Inter', 'Arial', sans-serif;
+
+  --transition-fast: 0.18s cubic-bezier(0.4,0,0.2,1);
+  --transition-med:  0.35s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.6s  cubic-bezier(0.4,0,0.2,1);
+
+  --nav-h:         80px;
+  --container-max: 1280px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+/* ---------- RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black-2); }
+::-webkit-scrollbar-thumb { background: var(--red-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--red); }
+
+::selection { background: var(--red); color: var(--white); }
+
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 3px; }
+
+/* ---------- UTILITY ---------- */
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+.section    { padding: 100px 0; position: relative; }
+
+.section-header { text-align: center; margin-bottom: 72px; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+  padding: 6px 16px;
+  border: 1px solid rgba(255,30,30,0.3);
+  border-radius: 20px;
+  background: var(--red-dim);
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(42px,6vw,72px);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.section-sub {
+  font-size: 17px;
+  color: var(--white-60);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; border: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap; position: relative; overflow: hidden;
+}
+.btn::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(255,255,255,0.08); opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.btn:hover::after { opacity: 1; }
+.btn-primary { background: var(--red); color: var(--white); }
+.btn-primary:hover { background: #E51A1A; transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.2); }
+.btn-ghost:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
+.btn-glow { box-shadow: 0 0 20px var(--red-glow), 0 4px 16px rgba(0,0,0,0.4); }
+.btn-glow:hover { box-shadow: 0 0 35px var(--red-glow), 0 0 60px rgba(255,30,30,0.2), 0 6px 24px rgba(0,0,0,0.4); }
+.btn-full { width: 100%; justify-content: center; }
+.btn-arrow { display: inline-block; transition: transform var(--transition-fast); }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* ---------- CARD LINK ---------- */
+.card-link {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--red); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap var(--transition-fast);
+}
+.card-link:hover { gap: 12px; }
+.card-link span { transition: transform var(--transition-fast); }
+.card-link:hover span { transform: translateX(4px); }
+
+/* ---------- ANIMATE ON SCROLL ---------- */
+.animate-el {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+.animate-el.from-left  { transform: translateX(40px); }
+.animate-el.animated   { opacity: 1; transform: translate(0); }
+
+/* ---------- TOAST ---------- */
+.toast {
+  position: fixed; bottom: 32px; right: 32px;
+  background: var(--black-4);
+  border: 1px solid rgba(255,30,30,0.3);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 20px rgba(255,30,30,0.1);
+  z-index: 9999;
+  transform: translateY(100px); opacity: 0;
+  transition: transform var(--transition-med), opacity var(--transition-med);
+  pointer-events: none;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast-icon {
+  width: 36px; height: 36px; background: var(--red); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 700; flex-shrink: 0;
+}
+.toast-content { display: flex; flex-direction: column; gap: 2px; }
+.toast-content strong { font-size: 14px; color: var(--white); }
+.toast-content span   { font-size: 12px; color: var(--white-60); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .section { padding: 72px 0; }
+  .toast { right:16px; left:16px; bottom:16px; }
+}
