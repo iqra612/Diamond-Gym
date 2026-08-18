@@ -9,6 +9,7 @@ import Locations from './components/Locations';
 import Trial from './components/Trial';
 import Footer from './components/Footer';
 import CursorGlow from './components/CursorGlow';
+import Preloader from './components/Preloader';
 
 function App() {
   const [toastMessage, setToastMessage] = useState(null);
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Preloader />
       <CursorGlow />
       <Navbar />
       
